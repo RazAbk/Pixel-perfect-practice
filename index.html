@@ -10,6 +10,7 @@
 </head>
 <body>
     
+    <div class="screen" onclick="toggleMenu()"></div>
     <header class="main-header">
         <div class="header-content main-layout flex align-center space-between">
             <div class="logo">blogin<span>.</span></div>
@@ -19,6 +20,7 @@
                 <li><a href="#">work</a></li>
                 <li><a href="#">contact</a></li>
             </ul>
+            <button class="btn-menu-toggle" onclick="toggleMenu()">☰</button>
         </div>
     </header>
 
@@ -72,5 +74,12 @@
         </div>
     </footer>
 
+
+    <script>
+        function toggleMenu() {
+            document.body.classList.toggle('menu-open');
+        }
+    </script>
+    
 </body>
 </html>
