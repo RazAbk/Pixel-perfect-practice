@@ -10,7 +10,18 @@
 </head>
 <body>
     
-    <div class="screen" onclick="toggleMenu()"></div>
+    <div class="screen" onclick="returnHome()"></div>
+
+    <div class="card-read-modal flex space-between align-center">
+            <h2>Get more</h2>
+            <p>Join us to get access to the latest stories!</p>
+            <input type="email" placeholder="example@email.com">
+            <div class="buttons flex">
+                <button onclick="returnHome()">close</button>
+                <button>submit</button>
+            </div>
+    </div>
+
     <header class="main-header">
         <div class="header-content main-layout flex align-center space-between">
             <div class="logo">blogin<span>.</span></div>
@@ -30,7 +41,7 @@
             <div class="card-content flex column space-between">
                 <h2 class="card-title">Duis aute irure dolor in henderit in voluptate.</h2>
                 <p class="card-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...</p>
-                <button class="card-btn">Continue Reading<span><img src="img/btnarrow.png"></span></button>
+                <button class="card-btn" onclick="toggleModal()">Continue Reading<span><img src="img/btnarrow.png"></span></button>
             </div>
         </div>
         <div class="card flex">
@@ -38,7 +49,7 @@
             <div class="card-content flex column space-between">
                 <h2 class="card-title">Duis aute irure dolor in henderit in voluptate.</h2>
                 <p class="card-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...</p>
-                <button class="card-btn">Continue Reading<span><img src="img/btnarrow.png"></span></button>
+                <button class="card-btn" onclick="toggleModal()">Continue Reading<span><img src="img/btnarrow.png"></span></button>
             </div>
         </div>
         <div class="card flex">
@@ -46,9 +57,10 @@
             <div class="card-content flex column space-between">
                 <h2 class="card-title">Duis aute irure dolor in henderit in voluptate.</h2>
                 <p class="card-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.<br><br>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...</p>
-                <button class="card-btn">Continue Reading<span><img src="img/btnarrow.png"></span></button>
+                <button class="card-btn" onclick="toggleModal()">Continue Reading<span><img src="img/btnarrow.png"></span></button>
             </div>
         </div>
+
         <div class="content-nav flex space-between align-center">
             <a><span><img src="img/prevarrow.png"></span>Previous</a>
             <a>Next<span><img src="img/nextarrow.png"></span></a>
@@ -56,7 +68,7 @@
     </main>
 
     <footer class="main-footer flex column align-center">
-        <div class="logo">blogin</div>
+        <div class="logo">blogin<span>.</span></div>
         <small>©2014 Blogin.com - All Rights Reserved - Find more free Templates at <span>Pixelhint.com</span></small>
         <div class="logo-container flex">
             <div class="footer-logo logo-facebook">
@@ -74,11 +86,29 @@
         </div>
     </footer>
 
-
     <script>
-        function toggleMenu() {
-            document.body.classList.toggle('menu-open');
+        const gElBody = document.body;
+        function returnHome(){
+            if(gElBody.classList.contains('menu-open')) gElBody.classList.toggle('menu-open');
+            
+            if(gElBody.classList.contains('modal-open')) gElBody.classList.toggle('modal-open');
+            
+            gElBody.style.overflow = 'visible';
         }
+        
+        function toggleMenu(){
+            let gElBody = document.body;
+            
+            gElBody.classList.toggle('menu-open');
+            gElBody.style.overflow = 'hidden';
+        }
+        
+        function toggleModal(){
+            document.body.classList.toggle('modal-open');
+            gElBody.style.overflow = 'hidden';
+
+        }
+
     </script>
     
 </body>
