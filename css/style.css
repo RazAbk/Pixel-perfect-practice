@@ -10,17 +10,17 @@
 
 @font-face {
   font-family: lato-bold;
-  src: url(/fonts/lato/Lato-Bold.ttf);
+  src: url(../fonts/lato/Lato-Bold.ttf);
 }
 
 @font-face {
   font-family: lato-regular;
-  src: url(/fonts/lato/Lato-Regular.ttf);
+  src: url(../fonts/lato/Lato-Regular.ttf);
 }
 
 @font-face {
   font-family: euro-pf55;
-  src: url(/fonts/eurpf55/eurof55.ttf);
+  src: url(../fonts/eurpf55/eurof55.ttf);
 }
 
 /* /////////////////////////////////////////////////////////////////////////////////////////////////// */
