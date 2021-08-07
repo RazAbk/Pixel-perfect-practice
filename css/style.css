@@ -37,7 +37,7 @@ h6 {
   padding: 0;
 }
 
-button:hover{
+button:hover {
   cursor: pointer;
 }
 
@@ -191,9 +191,7 @@ body.modal-open .card-read-modal {
   opacity: 1;
 }
 
-
 body.modal-open .screen {
-  
   pointer-events: auto;
   opacity: 1;
 }
@@ -206,7 +204,6 @@ body.modal-open .screen {
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
   padding: 20px;
-  
 
   background-color: rgb(255, 255, 255);
   flex-direction: column;
@@ -229,7 +226,7 @@ body.modal-open .screen {
   font-size: 1.5rem;
 }
 
-.card-read-modal input{
+.card-read-modal input {
   font-size: 1.2rem;
   border-radius: 10px;
   padding: 10px;
@@ -292,7 +289,6 @@ body.modal-open .screen {
   height: 40px;
   width: 40px;
   transition: background-color 0.3s;
-
 }
 
 .main-footer .logo {
@@ -373,6 +369,51 @@ body.modal-open .screen {
   padding: 0;
 }
 
+/* Drop down menu */
+
+.dropbtn {
+  width: 100%;
+  height: 100%;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  transform: translate(-44px, 61px);
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 140px;
+  box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+  z-index: 1;
+
+  transition: all 0.3s;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  pointer-events: initial;
+  opacity: 1;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
 /* /////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 /* MEDIA QUERIES */
@@ -384,7 +425,7 @@ body.modal-open .screen {
     max-width: 410px;
   }
 
-  .card-read-modal{
+  .card-read-modal {
     height: 100vh;
     width: 100vw;
 
@@ -474,6 +515,11 @@ body.modal-open .screen {
   .card-text {
     margin-bottom: 1rem;
   }
+
+  .dropdown-content {
+    transform: translate(-44px, 44px);
+    min-width: 250px;
+  }
 }
 
 /* Medium - Tablet */
@@ -524,13 +570,16 @@ body.modal-open .screen {
   .main-footer small {
     font-size: 0.8125rem;
   }
+
+  .dropdown-content {
+    transform: translate(-56px, 33px);
+    min-width: 163px;
+  }
 }
 
 /* Regular - Desktop */
 
 @media (min-width: 1100px) {
-  /* HEADER */
-
   .main-header {
     height: 130px;
     font-family: lato-regular;
@@ -539,12 +588,6 @@ body.modal-open .screen {
   .header-content {
     padding: 0;
   }
-
-  /* /////////////////////////////////////////////////////////////////////////////////////////////////// */
-
-  /* MAIN CONTENT */
-
-  /* card */
 
   .card-image {
     margin-inline-end: 2.5rem;
@@ -557,10 +600,6 @@ body.modal-open .screen {
     color: #4f4e4e;
   }
 
-  /* /////////////////////////////////////////////////////////////////////////////////////////////////// */
-
-  /* FOOTER */
-
   .main-footer {
     height: 315px;
     padding-top: 5rem;
@@ -570,10 +609,6 @@ body.modal-open .screen {
     font-size: 0.8125rem;
     margin-bottom: 2.1875rem;
   }
-
-  /* /////////////////////////////////////////////////////////////////////////////////////////////////// */
-
-  /* LAYOUT */
 
   .main-layout {
     max-width: 980px;
