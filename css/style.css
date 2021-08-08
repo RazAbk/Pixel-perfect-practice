@@ -520,6 +520,11 @@ body.modal-open .screen {
     transform: translate(-44px, 44px);
     min-width: 250px;
   }
+
+  .main-footer small {
+    font-size: 0.5rem;
+  }
+
 }
 
 /* Medium - Tablet */
